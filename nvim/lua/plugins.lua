@@ -46,4 +46,6 @@ packer.startup(function(use)
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim' -- For git blame and browse
   use 'ur4ltz/surround.nvim'
+
+  use 'David-Kunz/jester'
 end)
