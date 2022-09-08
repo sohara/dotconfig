@@ -24,13 +24,10 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   --buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
 
-  -- formatting
-  -- if client.server_capabilities.documentFormattingProvider then
-  --   vim.api.nvim_command [[augroup Format]]
-  --   vim.api.nvim_command [[autocmd! * <buffer>]]
-  --   vim.api.nvim_command [[autocmd  <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
-  --   vim.api.nvim_command [[augroup END]]
-  -- end
+  -- Eliminate tsserver as a formatter since we use prettier/eslint
+  if client.name == 'tsserver' then
+    client.resolved_capabilities.document_formatting = false
+  end
 end
 
 protocol.CompletionItemKind = {
