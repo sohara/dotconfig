@@ -11,6 +11,8 @@ ts.setup {
     disable = {},
   },
   ensure_installed = {
+    'javascript',
+    'typescript',
     'tsx',
     'lua',
     'json',
