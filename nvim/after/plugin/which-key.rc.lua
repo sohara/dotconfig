@@ -62,9 +62,15 @@ local mappings = {
 			B = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
 			c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
 			d = {
-				"<cmd>Gitsigns diffthis HEAD<cr>",
-				"Diff",
+				"<cmd>lua require 'gitsigns'.diffthis()<cr>",
+				"Diff head",
 			},
+			D = {
+				"<cmd>lua require 'gitsigns'.diffthis('~')<cr>",
+				"Diff head~1",
+			},
+			t = { "<cmd>lua require 'gitsigns'.toggle_deleted()<cr>", "Toggle deleted" },
+			T = { "<cmd>lua require 'gitsigns'.toggle_current_line_blame()<cr>", "Toggle current line blame" },
 		},
 		s = {
 			name = "Search",
@@ -76,6 +82,14 @@ local mappings = {
 			R = { "<cmd>Telescope registers<cr>", "Registers" },
 			k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 			C = { "<cmd>Telescope commands<cr>", "Commands" },
+		},
+		j = {
+			name = "Jester",
+			f = { '<cmd>lua require("jester").run_file()<CR>', "Run file" },
+			t = { '<cmd>lua require("jester").run()<CR>', "Run nearest test(s)" },
+			l = { '<cmd>lua require("jester").run_last()<CR>', "Run last" },
+			d = { '<cmd>lua require("jester").debug()<CR>', "Debug nearest" },
+			D = { '<cmd>lua require("jester").debug_file()<CR>', "Debug file" },
 		},
 	},
 }
