@@ -53,7 +53,7 @@ local mappings = {
 			r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
 			R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
 			s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
-			S = { "<cmd>lua require 'gitsigns'.stage_buffer()<cr>", "Stage Hunk" },
+			S = { "<cmd>lua require 'gitsigns'.stage_buffer()<cr>", "Stage Buffer" },
 			u = {
 				"<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
 				"Undo Stage Hunk",
@@ -95,3 +95,23 @@ local mappings = {
 }
 
 whichkey.register(mappings, opts)
+
+local visual_opts = {
+	mode = "v", -- NORMAL mode
+	prefix = "",
+	buffer = nil, -- Global mappings. Specify a buffer for bufer local mappings
+	silent = true, -- use `silent` when creating keymaps
+	noremap = true, -- use `noremap` when creating keymaps
+	nowait = true,
+}
+
+local visual_mappings = {
+	["<leader>"] = {
+		g = {
+			name = "Git",
+			g = { "<cmd>lua require('git.browse').open(true)<cr>", "Open file/folder/lines in repo" },
+		},
+	},
+}
+
+whichkey.register(visual_mappings, visual_opts)
