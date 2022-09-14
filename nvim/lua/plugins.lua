@@ -51,4 +51,6 @@ packer.startup(function(use)
 	use("David-Kunz/jester") -- Jest test running and debugging
 	use("theHamsta/nvim-dap-virtual-text") -- show values of variables in context
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }) -- Out of the box UI for DAP
+
+	use({ "folke/which-key.nvim" })
 end)
