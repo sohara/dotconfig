@@ -15,6 +15,7 @@ packer.startup(function(use)
 	use("shaunsingh/nord.nvim")
 	use("numToStr/Comment.nvim") -- Commenting like TPope's vim plugin
 	use("kyazdani42/nvim-web-devicons") -- File icons
+	use("kyazdani42/nvim-tree.lua") -- File icons
 	use("glepnir/lspsaga.nvim") -- LSP UIs
 	use("L3MON4D3/LuaSnip") -- Snippets
 	use("nvim-lualine/lualine.nvim") -- Statusline

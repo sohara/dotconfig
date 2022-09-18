@@ -31,6 +31,7 @@ local mappings = {
 			"List buffers",
 		},
 		["c"] = { "<cmd>bdelete!<CR>", "Close Buffer" },
+		["e"] = { "<cmd>NvimTreeToggle<CR>", "Explorer" },
 		["f"] = {
 			'<cmd>lua require("telescope.builtin").find_files({ no_ignore = false, hidden = true })<cr>',
 			"Find files",
