@@ -23,7 +23,7 @@ keymap.set("n", "te", ":tabedit<Return>", { silent = true })
 --[[ keymap.set("n", "sv", ":vsplit<Return><C-w>w", { silent = true }) ]]
 
 -- Move between windows
-keymap.set("n", "<Space>", "<C-w>w")
+--[[ keymap.set("n", "<Space>", "<C-w>w") ]]
 --[[ keymap.set('', 's<left>', '<C-w>h') ]]
 --[[ keymap.set('', 's<up>', '<C-w>k') ]]
 --[[ keymap.set('', 's<down>', '<C-w>j') ]]
