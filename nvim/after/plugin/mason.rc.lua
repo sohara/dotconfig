@@ -9,7 +9,7 @@ end
 
 mason.setup({})
 lspconfig.setup({
-	ensure_installed = { "tailwindcss" },
+	ensure_installed = { "rust-analyzer", "tailwindcss" },
 })
 
 require("lspconfig").tailwindcss.setup({})
