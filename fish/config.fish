@@ -2,16 +2,16 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-set fish_greeting " sdfsd"
+set fish_greeting ""
 
 set -gx TERM xterm-256color
 
 # theme
 set -g theme_color_scheme terminal-dark
 set -g fish_prompt_pwd_dir_length 1
-set -g theme_display_user yes
-set -g theme_hide_hostname no
-set -g theme_hostname always
+set -g theme_display_user no
+set -g theme_hide_hostname yes
+# set -g theme_hostname always
 
 # aliases
 alias g git
@@ -40,5 +40,3 @@ set -gx PATH "$BUN_INSTALL/bin" $PATH
 # Volta (Node.js version manager)
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
-
-
