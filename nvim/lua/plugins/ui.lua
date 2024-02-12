@@ -31,4 +31,16 @@ return {
       opts.config.header = vim.split(logo, "\n")
     end,
   },
+  -- bufferline
+  -- show only tab pages
+  {
+    "akinsho/bufferline.nvim",
+    opts = {
+      options = {
+        mode = "tabs",
+        show_buffer_close_icons = false,
+        show_close_icon = false,
+      },
+    },
+  },
 }
