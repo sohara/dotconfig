@@ -16,21 +16,14 @@ set -g theme_hide_hostname yes
 # aliases
 alias vim nvim
 
-# PATH
-set -gx PATH bin $PATH
-set -gx PATH ~/bin $PATH
-set -gx PATH ~/.local/bin $PATH
-
-# Bun
-set -gx PATH ~/.local/bin $PATH
-
-# Homebrew
+# Set PATH
+set -gx PATH $HOME/bin $PATH
+set -gx PATH $HOME/.local/bin $PATH
 set -gx PATH /opt/homebrew/bin $PATH
-
-# Others
 set -gx PATH /usr/local/bin $PATH
 set -gx PATH /usr/bin $PATH
 set -gx PATH /usr/sbin $PATH
+set -gx PATH /Library/PostgreSQL/15/bin $PATH
 
 # Bun
 set -gx BUN_INSTALL "$HOME/.bun"
@@ -40,6 +33,15 @@ set -gx PATH "$BUN_INSTALL/bin" $PATH
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
 
+# rbenv setup
+set -gx PATH $HOME/.rbenv/bin $PATH
+
+# Initialize rbenv
+if test -x (which rbenv)
+    status --is-interactive; and . (rbenv init -|psub)
+end
+
+# Function to simplify git commands
 function g
     if count $argv >/dev/null
         git $argv
