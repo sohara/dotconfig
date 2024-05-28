@@ -41,6 +41,9 @@ if test -x (which rbenv)
     status --is-interactive; and . (rbenv init -|psub)
 end
 
+# aliases
+alias k='kubectl'
+
 # Function to simplify git commands
 function g
     if count $argv >/dev/null
