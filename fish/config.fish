@@ -65,3 +65,8 @@ else
     end
 end
 # <<< conda initialize <<<
+
+# Source secrets
+if test -f $HOME/.config/fish/secrets.fish
+    source $HOME/.config/fish/secrets.fish
+end
