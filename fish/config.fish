@@ -25,6 +25,10 @@ set -gx PATH /usr/bin $PATH
 set -gx PATH /usr/sbin $PATH
 set -gx PATH /Library/PostgreSQL/15/bin $PATH
 
+# PostgreSQL client lib
+set -gx LDFLAGS -L/opt/homebrew/opt/libpq/lib
+set -gx CPPFLAGS -I/opt/homebrew/opt/libpq/include
+
 # Bun
 set -gx BUN_INSTALL "$HOME/.bun"
 set -gx PATH "$BUN_INSTALL/bin" $PATH
