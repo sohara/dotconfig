@@ -37,6 +37,10 @@ set -gx PATH "$BUN_INSTALL/bin" $PATH
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
 
+# Env vars to support Rails
+set -gx OBJC_DISABLE_INITIALIZE_FORK_SAFETY YES
+set -gx DISABLE_SPRING TRUE
+
 # rbenv setup
 set -gx PATH $HOME/.rbenv/bin $PATH
 
