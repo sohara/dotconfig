@@ -39,7 +39,7 @@ set -gx PATH "$VOLTA_HOME/bin" $PATH
 
 # Env vars to support Rails
 set -gx OBJC_DISABLE_INITIALIZE_FORK_SAFETY YES
-set -gx DISABLE_SPRING TRUE
+set -gx PGGSSENCMODE disable
 
 # rbenv setup
 set -gx PATH $HOME/.rbenv/bin $PATH
