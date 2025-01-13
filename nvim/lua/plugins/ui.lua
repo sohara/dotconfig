@@ -15,21 +15,21 @@ return {
   },
   -- custom dashboard logo
   {
-    "nvimdev/dashboard-nvim",
-    event = "VimEnter",
-    opts = function(_, opts)
-      local logo = [[
+    "folke/snacks.nvim",
+    opts = {
+      dashboard = {
+        preset = {
+          header = [[
 ███████╗ ██████╗ ██╗  ██╗ █████╗ ██████╗  █████╗ 
 ██╔════╝██╔═══██╗██║  ██║██╔══██╗██╔══██╗██╔══██╗
 ███████╗██║   ██║███████║███████║██████╔╝███████║
 ╚════██║██║   ██║██╔══██║██╔══██║██╔══██╗██╔══██║
 ███████║╚██████╔╝██║  ██║██║  ██║██║  ██║██║  ██║
 ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝
-      ]]
-
-      logo = string.rep("\n", 8) .. logo .. "\n\n"
-      opts.config.header = vim.split(logo, "\n")
-    end,
+      ]],
+        },
+      },
+    },
   },
   -- bufferline
   -- show only tab pages
