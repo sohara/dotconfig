@@ -24,6 +24,7 @@ set -gx PATH /usr/local/bin $PATH
 set -gx PATH /usr/bin $PATH
 set -gx PATH /usr/sbin $PATH
 set -gx PATH /Library/PostgreSQL/15/bin $PATH
+set -gx PATH $HOME/Library/Python/3.9/bin $PATH
 
 # PostgreSQL client lib
 set -gx LDFLAGS -L/opt/homebrew/opt/libpq/lib
